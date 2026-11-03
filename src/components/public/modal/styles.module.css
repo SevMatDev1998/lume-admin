@@ -1,0 +1,70 @@
+.ModalLayoutOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.ModalLayout {
+    width: 100%;
+    max-width: 540px;
+    background: #FFF;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    z-index: 5000;
+    transform: translate(-50%, 100%);
+    transition: .15s linear;
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+.ModalLayoutHeader {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.ModalLayoutBody {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+
+@media (max-width: 630px) {
+    .ModalLayout {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 90%; /* Optional: to add some margin */
+    }
+}
+
+
+
+.ModalLayout.IsOpen {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+
+.ModalLayoutHeaderTitle {
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.94px;
+    letter-spacing: 0%;
+    margin-top: 10px;
+    }
+
+.ModalLayoutHeaderClose {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 9999;
+
+}

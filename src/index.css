@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table td {
+    max-width: 100px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* Adjust max-width on smaller screens */
+@media (max-width: 768px) {
+    .table td {
+        max-width: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .table td {
+        max-width: 60px !important;
+    }
+}
+
+.rbc-past-slot {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
